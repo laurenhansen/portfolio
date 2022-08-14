@@ -20,7 +20,7 @@ const Layout = ({ pageTitle, children }) => {
       <div class="nav-wrapper">
         <header>
             <h1>{data.site.siteMetadata.title}</h1>
-            <h2>UX Designer | Chicago, IL</h2>
+            <h3>UX Designer | Chicago, IL</h3>
         </header>
         <nav>
         <ul class="nav-links">

@@ -5,7 +5,13 @@ import { StaticImage } from 'gatsby-plugin-image'
 const IndexPage = () => {
   return (
     <Layout pageTitle="Portfolio">
-      <p>This is a test.</p>
+      <h2>Portfolio</h2>
+      <h3>Item Title</h3>
+      <p>item description</p>
+      <h3>Item Title</h3>
+      <p>item description</p>
+      <h3>Item Title</h3>
+      <p>item description</p>
       
     </Layout>
   )
