@@ -1,0 +1,51 @@
+$headline-font: canada-type-gibson, serif;
+$text-font: ff-meta-serif-web-pro, serif;
+
+$color-dark: #121113;
+$color-light: #f7f7f2;
+$color-1: #c16e70;
+$color-2: #009fb7;
+$color-3: #426b69;
+
+body {font-family: $text-font; margin: 0;padding: 0; color: $color-dark;}
+h1, h2, h3, h4 {font-family: $headline-font; font-weight: 600; color: $color-dark;}
+
+.active {color: $color-3;}
+
+.page-container {
+    margin: auto;
+    width: 100%;
+  }
+  .heading {
+    color: rebeccapurple;
+  }
+  .nav-links {
+    display: flex;
+    list-style: none;
+    padding-left: 0;
+  }
+  .nav-link-item {
+    padding-right: 2rem;
+  }
+  .nav-link-text {
+    color: black;
+  }
+
+  .site-title {
+    font-size: 3rem;
+    color: gray;
+    margin: 3rem 0;
+  }
+
+  .page-wrapper {display:flex;}
+
+  .nav-wrapper {
+    display: flex;
+    align-items: center;
+  }
+  header, nav {
+    flex-grow: 1;
+    text-align: center;
+  }
+
+  .content-wrapper {background-color: #ffffff;}
