@@ -11,7 +11,7 @@ const SiteNav = () => {
 
     return (
         <nav id="main-nav" className={`site-nav ${isActive ? "" : "open"}`}>
-        <a class="menu-toggle" onClick={handleToggle}>
+        <a class="menu-toggle" onClick={handleToggle} tabIndex={1}>
                   <div class="bar"></div>
                   <div class="bar"></div>
                   <div class="bar"></div>

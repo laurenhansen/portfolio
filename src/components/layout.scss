@@ -3,11 +3,11 @@ $text-font: ff-meta-serif-web-pro, serif;
 
 $color-dark: #121113;
 $color-light: #f7f7f2;
-$color-1: #c16e70;
+$color-1: #ff008d;
 $color-2: #009fb7;
 $color-3: #426b69;
 
-body {font-family: $text-font; margin: 0;padding: 0; color: $color-dark;}
+body {font-family: $text-font; margin: 0;padding: 0; color: $color-dark; font-size: 16px;}
 h1, h2, h3, h4 {font-family: $headline-font; font-weight: 600; color: $color-dark;margin-top:0.25em;margin-bottom: 0.25em;}
 
 .active {color: $color-3;}
@@ -34,27 +34,27 @@ h1, h2, h3, h4 {font-family: $headline-font; font-weight: 600; color: $color-dar
 	padding: 0;
 	width: 58px;
 	height: 58px;
-	background-color: #ff008d;
+	background-color: $color-1;
 	border-radius: 50px;
-	transition: width .25s, height .25s, border-radius .5s;
+	transition: width .25s, height .25s, border-radius .25s;
 	z-index: 50;
 }
 
 nav.open {
 	height: auto;
-	width: 150px;
-  padding-bottom: 1.5em;
+	width: 200px;
+  padding-bottom: 1rem;
 	border-radius: 25px 0 25px 25px;
-	transition: width .25s, height .5s, border-radius .1s;
+	transition: width .5s, height .5s, border-radius .5s;
 }
 
 nav.open ul {
-	margin: 0 10px;
+	/*margin: 0 10px;*/
 }
 
 nav ul li {
-	padding: 0.5em 0;
-	line-height: 1em;
+	/*padding: 0.5em 0;
+	line-height: 1em;*/
 }
 
 nav a {
@@ -80,7 +80,7 @@ nav a.menu-toggle {
 }
 
 nav.open a.menu-toggle {
-  right: calc(-25% - 12px);
+  right: calc(-25% - 24px);
   transition: right .16s;
 }
 
@@ -122,6 +122,18 @@ nav ul {
 	visibility: hidden;
 	opacity: 0;
 	transition: opacity .5s;
+  list-style-type: none;
+  margin: 0;
+  padding: 0.5rem;
+}
+
+nav ul li {
+  margin: 0.5rem;
+  padding: 0.25rem;
+  border-bottom: 1px dashed $color-light;
+  font-family: $headline-font;
+  font-size: 1.5rem;
+  text-transform: uppercase;
 }
 
 nav.open ul {
