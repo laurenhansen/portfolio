@@ -8,7 +8,7 @@ $color-2: #009fb7;
 $color-3: #426b69;
 
 body {font-family: $text-font; margin: 0;padding: 0; color: $color-dark;}
-h1, h2, h3, h4 {font-family: $headline-font; font-weight: 600; color: $color-dark;}
+h1, h2, h3, h4 {font-family: $headline-font; font-weight: 600; color: $color-dark;margin-top:0.25em;margin-bottom: 0.25em;}
 
 .active {color: $color-3;}
 
@@ -16,36 +16,117 @@ h1, h2, h3, h4 {font-family: $headline-font; font-weight: 600; color: $color-dar
     margin: auto;
     width: 100%;
   }
-  .heading {
-    color: rebeccapurple;
-  }
-  .nav-links {
-    display: flex;
-    list-style: none;
-    padding-left: 0;
-  }
-  .nav-link-item {
-    padding-right: 2rem;
-  }
-  .nav-link-text {
-    color: black;
-  }
 
-  .site-title {
-    font-size: 3rem;
-    color: gray;
-    margin: 3rem 0;
-  }
 
   .page-wrapper {display:flex;}
 
-  .nav-wrapper {
-    display: flex;
-    align-items: center;
-  }
+
   header, nav {
-    flex-grow: 1;
     text-align: center;
   }
 
   .content-wrapper {background-color: #ffffff;}
+
+  nav {
+	position: fixed;
+	top: 1em;
+	right: 1em;
+	padding: 0;
+	width: 58px;
+	height: 58px;
+	background-color: #ff008d;
+	border-radius: 50px;
+	transition: width .25s, height .25s, border-radius .5s;
+	z-index: 50;
+}
+
+nav.open {
+	height: auto;
+	width: 150px;
+  padding-bottom: 1.5em;
+	border-radius: 25px 0 25px 25px;
+	transition: width .25s, height .5s, border-radius .1s;
+}
+
+nav.open ul {
+	margin: 0 10px;
+}
+
+nav ul li {
+	padding: 0.5em 0;
+	line-height: 1em;
+}
+
+nav a {
+	color: #fff;
+	text-decoration: none;
+}
+
+nav a:hover {
+	border-bottom: 1px dotted #fff;
+}
+
+nav a.menu-toggle {
+	display: inline-block;
+	border: 0;
+	width: 48px;
+	height: 48px;
+	background-color: transparent;
+	/*border-radius: 50px;*/
+	padding: 5px;
+  position: relative;
+  right: 0;
+  transition: right .25s;
+}
+
+nav.open a.menu-toggle {
+  right: calc(-25% - 12px);
+  transition: right .16s;
+}
+
+nav a.menu-toggle > div {
+	height: 5px;
+	width: 34px;
+	background-color: #fff;
+	margin-bottom: 6px;
+	border-radius: 2px;
+	margin-left: 7px;
+	opacity: 1;
+	transition: all .2s;
+}
+
+nav a.menu-toggle > div:first-child {
+	margin-top: 11px;
+}
+
+nav.open a.menu-toggle > div:not(:first-child):not(:last-child) {
+	opacity: 0;
+}
+
+nav.open a.menu-toggle > div:first-child {
+	transform-origin: top left;
+	transform: rotate(45deg);
+}
+
+nav.open a.menu-toggle > div:last-child {
+	transform-origin: bottom left;
+	transform: rotate(-45deg);
+}
+
+nav.open a.menu-toggle > div {
+	margin-left: 8px;
+	transition: all .2s;
+}
+
+nav ul {
+	visibility: hidden;
+	opacity: 0;
+	transition: opacity .5s;
+}
+
+nav.open ul {
+	visibility: visible;
+	opacity: 1;
+	transition: opacity .5s;
+	transition-delay: .25s;
+}
