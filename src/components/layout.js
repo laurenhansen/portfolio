@@ -1,6 +1,6 @@
 import * as React from 'react'
 import SiteNav from './nav.js'
-import { Link, useStaticQuery, graphql } from 'gatsby'
+import { useStaticQuery, graphql } from 'gatsby'
 import "./layout.scss"
 
 const Layout = ({ pageTitle, children }) => {
@@ -21,7 +21,7 @@ const Layout = ({ pageTitle, children }) => {
       
         <header>
             <h1>{data.site.siteMetadata.title}</h1>
-            <h3>UX Designer | Chicago, IL</h3>
+            <h2>UX Designer | Chicago, IL</h2>
         </header>
       <SiteNav></SiteNav>
       
@@ -29,6 +29,7 @@ const Layout = ({ pageTitle, children }) => {
          
       
       <div class="content-wrapper">
+        <aside></aside>
         <main>
           {children}
          </main>

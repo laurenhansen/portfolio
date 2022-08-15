@@ -11,11 +11,11 @@ const SiteNav = () => {
 
     return (
         <nav id="main-nav" className={`site-nav ${isActive ? "" : "open"}`}>
-        <a class="menu-toggle" onClick={handleToggle} tabIndex={1}>
+        <Link to="#" class="menu-toggle" onClick={handleToggle}>
                   <div class="bar"></div>
                   <div class="bar"></div>
                   <div class="bar"></div>
-        </a>
+        </Link>
               <ul>
                   <li><Link to="/" class="nav-link-text" activeClassName="active">
                 Home
