@@ -3,7 +3,16 @@ require("dotenv").config()
 module.exports = {
   siteMetadata: {
     title: `Lauren N. Hansen`,
-    siteUrl: `https://www.yourdomain.tld`
+    siteUrl: `https://www.yourdomain.tld`,
+    message: ``,
+    url: ``,
+    project: ``,
+    headline: ``,
+    basePath: ``,
+    name: ``,
+    version: ``,
+    developer: ``,
+    coauthorBusiness: ``,
   },
   plugins: [
     "gatsby-plugin-sass", {
@@ -23,7 +32,15 @@ module.exports = {
         "path": "./src/images/"
       },
       __key: "images"
-  }, {
+  }, 
+  {
+    resolve: 'gatsby-source-filesystem',
+    options: {
+      name: `portfolio`,
+      path: `${__dirname}/portfolio/`,
+    },
+  },
+  {
     resolve: 'gatsby-source-filesystem',
     options: {
       "name": "pages",
@@ -45,5 +62,6 @@ module.exports = {
       lang: 'en'
     }
   },
+  "gatsby-plugin-mdx", 
 ],
 };

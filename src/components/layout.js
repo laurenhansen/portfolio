@@ -29,7 +29,6 @@ const Layout = ({ pageTitle, children }) => {
          
       
       <div class="content-wrapper">
-        <aside></aside>
         <main>
           {children}
          </main>

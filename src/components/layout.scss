@@ -20,14 +20,16 @@ header {margin: 0 5.5rem; padding: 1rem; border-bottom: 1px dotted $color-dark;}
   }
 
 
-  .page-wrapper {display:flex;}
+  /*.page-wrapper {display:flex;}*/
 
 
   header, nav {
     text-align: center;
   }
 
-  .content-wrapper {background-color: #ffffff;}
+  .content-wrapper { display: flex; margin: 0 5.5rem; padding: 1rem;}
+  .content-wrapper main {flex-grow:3;padding-top: 3rem;}
+  .content-wrapper aside {flex-grow:2;}
 
   nav {
 	position: fixed;
@@ -48,15 +50,6 @@ nav.open {
   padding-bottom: 1rem;
 	border-radius: 25px 0 25px 25px;
 	transition: width .5s, height .5s, border-radius .5s;
-}
-
-nav.open ul {
-	/*margin: 0 10px;*/
-}
-
-nav ul li {
-	/*padding: 0.5em 0;
-	line-height: 1em;*/
 }
 
 nav a {
